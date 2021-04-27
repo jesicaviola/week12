@@ -47,9 +47,6 @@ describe('division', function() {
     var result = week12.division(dividendo, divisor);
     expect(result).toBe(expected);
   });
-});
-
-describe('division', function() {
   test('division', function() {
     var dividendo = 6;
     var divisor = 3;
@@ -60,11 +57,17 @@ describe('division', function() {
 });
 
 describe('tablaMultiplicar', function() {
-  test('multiplication table of 2', function() {
+  test('multiplication table of 2 with 12 results', function() {
     var multiplicando = 2;
-    var cantidad = 10;
-    var expected = [0,2,4,6,8,10,12,14,16,18,20];
+    var cantidad = 12;
+    var expected = [0,2,4,6,8,10,12,14,16,18,20,22,24];
     var result = week12.tablaMultiplicar(multiplicando, cantidad);
+    expect(result).toEqual(expected);
+  });
+  test('multiplication table of 2 with 10 results', function() {
+    var multiplicando = 2;
+    var expected = [0,2,4,6,8,10,12,14,16,18,20];
+    var result = week12.tablaMultiplicar(multiplicando);
     expect(result).toEqual(expected);
   });
 });
@@ -75,15 +78,6 @@ describe('potencia', function() {
     var exponente = 2;
     var expected = 4;
     var result = week12.potencia(base, exponente);
-    expect(result).toBe(expected);
-  });
-});
-
-describe('cuadrado', function() {
-  test('square', function() {
-    var x = 2;
-    var expected = 4;
-    var result = week12.cuadrado(x);
     expect(result).toBe(expected);
   });
 });
